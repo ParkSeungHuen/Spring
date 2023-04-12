@@ -1,7 +1,11 @@
 package com.example.demo.domain;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) // DB가 자동으로 생성
     private Long id;
     private String name;
 
